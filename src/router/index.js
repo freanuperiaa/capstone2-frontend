@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import store from "../store/index.js";
 import Profile from "../views/Profile.vue";
 import NewPost from "../views/NewPost.vue";
+import Register from "../views/Register.vue";
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,14 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
+    meta: {
+      allowAnonymous: true
+    }
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register,
     meta: {
       allowAnonymous: true
     }

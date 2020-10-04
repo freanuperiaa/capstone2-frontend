@@ -11,6 +11,7 @@
         </div>
         
         <button type="button" v-on:click="login">Login</button>
+        <button @click="register">Register</button>
     </div>
 </template>
 
@@ -28,6 +29,7 @@ export default {
         }
     },
     methods: {
+
         async login() {
 
             await UserService.login(this.email, this.password);
@@ -36,6 +38,11 @@ export default {
             this.$router.push("/");
             
         },
+
+        register() {
+            this.$router.push("/register")
+        },
+
         ...mapActions(['loginUser']),
     }
 }

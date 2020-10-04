@@ -7,6 +7,7 @@ import Profile from "../views/Profile.vue";
 import NewPost from "../views/NewPost.vue";
 import Register from "../views/Register.vue";
 import AddFriend from "../views/AddFriend.vue";
+import Friend from "../views/Friend.vue";
 
 Vue.use(VueRouter)
 
@@ -54,6 +55,12 @@ const routes = [
     path: "/add-friend",
     name: "add-friend",
     component: AddFriend
+  },
+  {
+    path: "/friend/:id",
+    name: "friend",
+    component: Friend,
+    props: true,
   }
 ]
 

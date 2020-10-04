@@ -7,7 +7,10 @@
         <h3> {{ email }} </h3>
         <h3> Phone Number: {{ phoneNumber }} </h3>
         <h4>id: {{ userId }}</h4>
-        <h4>Friends: {{ friends }}</h4>
+        <h4>Friends: </h4>
+        <div class="friend-item" v-for="friend in friends" :key="friend">
+            <h5 @click="goToFriend(friend)">{{ friend }}</h5>
+        </div>
 
         <button @click="deactivateAccount">Deactivate Account</button>
     </div>
@@ -27,7 +30,7 @@ export default {
             name: "",
             phoneNumber: 0,
             email: "",
-            friends: 0,
+            friends: [],
             userId: "some"
         }
     },
@@ -39,6 +42,7 @@ export default {
                 console.log("deleting account...")
             }
         },
+
         retrieveUserInfo() {
             api.get("users/me")
             .then(response => response.data[0])
@@ -47,9 +51,14 @@ export default {
                 this.name = data.firstName + " " + data.lastName,
                 this.phoneNumber = data.mobileNo,
                 this.email = data.email,
-                this.friends = data.friends.length,
+                this.friends = data.friends,
                 this.userId = data._id
             })
+        },
+
+        goToFriend(friendId) {
+            console.log("!!!!!!!!!", friendId);
+            this.$router.push("/friend/" + friendId);
         }
     },
 

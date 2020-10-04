@@ -2,12 +2,12 @@
   <div class="home">
     <h1>Welcome to Home Page!</h1>
 
-    <button @click="clickMe">Click me!</button>
     <button @click="logout">Logout</button>
     
     <button @click="goToProfile">My Profile</button>
 
     <button @click="goToMakePost">Add a new Post</button>
+    <button @click="goToAddFriend">Add a Friend</button>
 
     <my-story/>
   </div>
@@ -44,6 +44,11 @@ export default {
     goToMakePost() {
       this.$router.push("/new-post");
     },
+
+    goToAddFriend() {
+      this.$router.push("/add-friend");
+    },
+
     ...mapActions(['logoutUser'])
   }
 }

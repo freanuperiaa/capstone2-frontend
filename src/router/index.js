@@ -6,6 +6,7 @@ import store from "../store/index.js";
 import Profile from "../views/Profile.vue";
 import NewPost from "../views/NewPost.vue";
 import Register from "../views/Register.vue";
+import AddFriend from "../views/AddFriend.vue";
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,11 @@ const routes = [
     path: "/new-post",
     name: "new-post",
     component: NewPost
+  },
+  {
+    path: "/add-friend",
+    name: "add-friend",
+    component: AddFriend
   }
 ]
 

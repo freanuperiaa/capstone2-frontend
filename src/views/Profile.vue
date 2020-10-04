@@ -6,6 +6,7 @@
         <h2> {{ name }} </h2>
         <h3> {{ email }} </h3>
         <h3> Phone Number: {{ phoneNumber }} </h3>
+        <h4>id: {{ userId }}</h4>
         <h4>Friends: {{ friends }}</h4>
 
         <button @click="deactivateAccount">Deactivate Account</button>
@@ -26,7 +27,8 @@ export default {
             name: "",
             phoneNumber: 0,
             email: "",
-            friends: 0
+            friends: 0,
+            userId: "some"
         }
     },
     methods: {
@@ -41,10 +43,12 @@ export default {
             api.get("users/me")
             .then(response => response.data[0])
             .then(data => {
+                console.log(data);
                 this.name = data.firstName + " " + data.lastName,
-                this.phoneNumber = data.phoneNumber,
+                this.phoneNumber = data.mobileNo,
                 this.email = data.email,
-                this.friends = data.friends.length
+                this.friends = data.friends.length,
+                this.userId = data._id
             })
         }
     },

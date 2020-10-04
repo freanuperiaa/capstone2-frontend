@@ -28,5 +28,9 @@ export const UserService = {
             });
     },
 
+    getCurrentUser() {
+        api.get('users/me')
+    }
+
 
 }

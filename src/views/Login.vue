@@ -31,10 +31,10 @@ export default {
         async login() {
 
             await UserService.login(this.email, this.password);
-
-            await this.loginUser();
             console.log("finished logging in");
+            await this.loginUser();
             this.$router.push("/");
+            
         },
         ...mapActions(['loginUser']),
     }

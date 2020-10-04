@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from "../views/Login.vue";
 import store from "../store/index.js";
+import Profile from "../views/Profile.vue";
+import NewPost from "../views/NewPost.vue";
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ const routes = [
     meta: {
       allowAnonymous: true
     }
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: Profile
+  },
+  {
+    path: "/new-post",
+    name: "new-post",
+    component: NewPost
   }
 ]
 

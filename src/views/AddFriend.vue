@@ -8,7 +8,7 @@
             <input type="text" id="friend-id" v-model="friendId">
         </div>
 
-        <button @click="addFriend">Add Friend</button>
+        <button @click="addFriend" class="add-friend">Add Friend</button>
     </div>
 
 </template>
@@ -43,6 +43,10 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
+
+    .add-friend {
+        margin-top: 50px;
+    }
 
 </style>

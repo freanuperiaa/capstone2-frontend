@@ -3,9 +3,11 @@
     <div id="new-post">
 
         <h2>Create a Post</h2>
-
+        <h3>Post Title:</h3>
         <input type="text" v-model="postTitle">
-        <input type="text" v-model="postContent">
+
+        <h3>Post Content:</h3>
+        <input type="textarea" v-model="postContent">
 
         <button @click="submitPost">Submit Post</button>
     </div>
@@ -52,5 +54,22 @@ export default {
 
 <style scoped>
 
+    #new-post {
+        width: 30%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #new-post > input {
+        margin: 10px 30px;
+    }
+
+    #new-post > button {
+        width: 200px;
+        margin: 50px auto;
+    }
 
 </style>

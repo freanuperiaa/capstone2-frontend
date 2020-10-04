@@ -70,4 +70,12 @@ export default {
 
 <style scoped>
 
+#profile {
+    width: 40%;
+    margin: 50px auto 0px;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding: 50px;
+}
+
 </style>

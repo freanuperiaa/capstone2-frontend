@@ -51,7 +51,7 @@ export default {
 <style>
 
     #login {
-        margin-top: 30%;
+        margin-top: 250px;
     }
 
     .input-group {

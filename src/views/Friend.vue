@@ -1,21 +1,24 @@
 <template>
     <div id="friend">
-        <h2>Friend</h2>
 
-        <h3>Name: {{ name }}</h3>
-        <h4>Email: {{ email }} </h4>
-        <h4> phone number: {{ phoneNumber }} </h4>
-        <h4>user id: {{ userId }} </h4>
-        <h4>friends: {{  friends }} </h4>
+        <div id="friend-content">
+            <h2>Friend</h2>
 
-        <h3>Posts:</h3>
-        <post 
-            v-for="post in posts" :key="post._id" 
-            :title="post.title"
-            :content="post.content"
-            :author="post.author"
-            :date="post.date"
-        />
+            <h3>Name: {{ name }}</h3>
+            <h4>Email: {{ email }} </h4>
+            <h4> phone number: {{ phoneNumber }} </h4>
+            <h4>user id: {{ userId }} </h4>
+            <h4>friends: {{  friends }} </h4>
+
+            <h3>Posts:</h3>
+            <post 
+                v-for="post in posts" :key="post._id" 
+                :title="post.title"
+                :content="post.content"
+                :author="post.author"
+                :date="post.date"
+            />
+        </div>
 
     </div>
 </template>
@@ -74,6 +77,11 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
+
+#friend-content {
+    width: 40%;
+    margin: 50px auto 0px;
+}
 
 </style>

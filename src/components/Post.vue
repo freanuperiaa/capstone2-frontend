@@ -22,3 +22,13 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+#post {
+    border: 1px solid black;
+    border-radius: 30px;
+    margin: 40px 20px;
+}
+
+</style>

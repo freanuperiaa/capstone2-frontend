@@ -53,3 +53,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+    .home {
+      width: 40%;
+      margin: 0 auto;
+    }
+</style>
